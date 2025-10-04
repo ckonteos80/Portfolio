@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christos Konteos | Portfolio</title>
+  <style>
+    :root{
+      --bg:#0d1117; --fg:#f5f5f5; --muted:#8b949e; --accent:#58a6ff; --line:#222;
+      --maxw:1150px; --base:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    body{font-size:var(--base);line-height:1.9}
+    header{
+      text-align:center;padding:3rem 1rem 2rem;
+      background:linear-gradient(180deg,#141a22,var(--bg));border-bottom:1px solid var(--line)
+    }
+    h1{font-size:3rem;margin:.25rem 0 .5rem}
+    h2{font-size:1.8rem;color:var(--accent);margin:2.25rem 0 1rem}
+    .lead{color:var(--muted);font-size:1.2rem}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+    section{padding:1.5rem 0}
+    p{opacity:.95}
+    ul{margin:0;padding-left:1.2rem}
+    .grid{display:grid;gap:22px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .buttons{margin-top:1rem}
+    .button{
+      display:inline-block;margin:.5rem .5rem 0;padding:1rem 1.6rem;border-radius:10px;
+      font-weight:700;text-decoration:none;color:white;transition:filter .2s;font-size:1rem
+    }
+    .btn-accent{background:#58a6ff}.btn-accent:hover{filter:brightness(1.1)}
+    .btn-green{background:#238636}.btn-green:hover{filter:brightness(1.1)}
+    .card{
+      border:1px solid var(--line);border-radius:14px;padding:18px;background:#0f141b
+    }
+    .card h3{margin:.2rem 0 .4rem;font-size:1.3rem}
+    .card p{margin:.4rem 0 .8rem;opacity:.95}
+    .thumb{
+      width:100%;height:auto;border-radius:10px;margin-bottom:.8rem;
+      box-shadow:0 0 14px rgba(0,0,0,.45)
+    }
+    footer{margin-top:3rem;text-align:center;font-size:1rem;color:var(--muted);padding:2rem 0}
+    @media (max-width:520px){
+      h1{font-size:2.3rem} h2{font-size:1.5rem} :root{--base:18px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Christos Konteos</h1>
+    <p class="lead">Senior Visual Content Producer • Creative Technologist</p>
+    <div class="buttons">
+      <a class="button btn-accent" href="https://vimeopro.com/ckonteos/content" target="_blank">🎬 Vimeo Portfolio</a>
+      <a class="button btn-green" href="https://www.linkedin.com/in/christos-konteos-8900bb19/" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Summary from CV -->
+    <section>
+      <h2>About</h2>
+      <p>
+        A dynamic creative professional translating organizational vision into on-brand, high-quality content.
+        I lead end-to-end production pipelines across multicamera livestreams, video for social/mobile/apps, events,
+        and B2B presentations. Comfortable inside varied corporate cultures, I operate as the creative arm of marketing—
+        aligning narrative, aesthetic, and technical decisions to strategy and KPIs. I continuously push boundaries using
+        multimodal AI for enhancement and automation, including building AI agents for research and content workflows.
+      </p>
+    </section>
+
+    <!-- Skills bullets -->
+    <section>
+      <h2>Skills</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Areas of Expertise</h3>
+          <ul>
+            <li>Multicamera Livestreaming</li>
+            <li>Video Editing</li>
+            <li>Motion Graphic Design</li>
+            <li>Videography & Photography</li>
+            <li>Production & Media Management</li>
+            <li>Copywriting</li>
+            <li>B2B Sales Enablement</li>
+            <li>AI Agent Development</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tools & Tech</h3>
+          <ul>
+            <li>Premiere Pro • DaVinci Resolve • Final Cut Pro • Avid</li>
+            <li>After Effects • Photoshop • Illustrator • Lightroom</li>
+            <li>Unity (C#) • OpenXR • Unreal (virtual sets)</li>
+            <li>ComfyUI • Generative AI for production</li>
+            <li>Monday.com • Airtable • Microsoft Office</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlight project pages -->
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="grid grid-2">
+        <!-- Camera-To-ComfyUI -->
+        <article class="card">
+          <img class="thumb" src="https://github.com/user-attachments/assets/ab436f71-4b27-43f5-81fa-0edc90352ffd" alt="Camera-To-ComfyUI">
+          <h3>🎥 Camera-To-ComfyUI</h3>
+          <p>Real-time Processing → ComfyUI pipeline: capture webcam frames, generate with AI, and display results side-by-side in a live loop.</p>
+          <div class="buttons">
+            <a class="button btn-accent" href="https://ckonteos80.github.io/CameraAI/" target="_blank">🌐 Live Page</a>
+            <a class="button btn-green" href="https://github.com/ckonteos80/CameraAI" target="_blank">💻 Repository</a>
+          </div>
+        </article>
+
+        <!-- DadaAndroid -->
+        <article class="card">
+          <img class="thumb" src="https://github.com/user-attachments/assets/cc08e637-f8e1-4a30-817d-6d6c1083cdf0" alt="DadaAndroid">
+          <h3>🌀 DadaAndroid</h3>
+          <p>Create Dadaist poems (Tristan Tzara method) using motion input, live news text, and XR camera overlays—built with Unity for Android.</p>
+          <div class="buttons">
+            <a class="button btn-accent" href="https://ckonteos80.github.io/DadaPoemPump_Android/" target="_blank">🌐 Live Page</a>
+            <a class="button btn-green" href="https://github.com/ckonteos80/DadaPoemPump_Android" target="_blank">💻 Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dubai, UAE • © <span id="y"></span> Christos Konteos</p>
+  </footer>
+
+  <script>
+    // tiny helper to keep the year current
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
